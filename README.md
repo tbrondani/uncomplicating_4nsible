@@ -1,2 +1,6 @@
-# uncomplicating_4nsible
-This repo is dedicated to my projects and studies based on the amazing series Infra-as-Code Expert (by LinuxTips) and focused on Ansible.
+# Ansibe like a boss
+
+Repositorio dedicado a criaçao, configuracao e deploy de cluster kubernetes via ansible na AWS.
+
+## Conteudo de estudos
+Idealizado pelo treinamento SENSACIONAL da Linuxtips(@badtuxx).

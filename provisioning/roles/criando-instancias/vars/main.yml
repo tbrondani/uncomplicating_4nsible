@@ -1,0 +1,9 @@
+---
+# vars file for criando-instancias
+instance_type : t2.medium
+sec_group_name: SG-k8s
+image: ami-0e472ba40eb589f49
+aws_region: us-east-1
+aws_profile: kube
+keypair: ansible
+count_instances: 3
