@@ -1,5 +1,22 @@
-- name: INstalando o docker
+- name: Instalando o docker
   shell: curl -fsSL https://get.docker.com | bash
+
+- name: Ajustando o cgroup driver - Stop Docker
+  shell: systemctl stop docker
+
+- name: AJustando o cgroup driver - editando o servico
+  lineinfile:
+    path: /lib/systemd/system/docker.service
+    regexp: "^ExecStart"
+
+    line:  'ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --exec-opt native.cgroupdriver=systemd'
+
+- name: Ajustando o cgroup driver - reload no daemon
+  shell: systemctl daemon-reload
+
+- name: Ajustando o cgroup driver - start docker
+  shell: systemctl start docker ; systemctl enable docker
+
 
 - name: Adicionando as chaves do repo apt do kubernetes
   apt_key:
@@ -8,7 +25,7 @@
 
 - name: Adicionando o repo do k8s
   apt_repository:
-    repo: dev https://apt.kubernetes.io/ kubernetes-xenial main
+    repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
     state: present
 
 - name: Instalando os pacotes kubeadm, kubelet e kubectl
