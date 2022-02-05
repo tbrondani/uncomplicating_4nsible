@@ -10,6 +10,6 @@ This repo is dedicated to my projects and studies based on the amazing series In
 
 
 ## Copyright and Ownership
-The code developed here does not substitute or is in any way trying to undermine or copy content from the course, its only a way to improve the way I am studying
+The code developed here does not substitute the training or is in any way trying to undermine or copy content from the course, its only a way to improve the way I am studying.
 
 Thanks @badtuxx for the amazing course. ##VAIIII
