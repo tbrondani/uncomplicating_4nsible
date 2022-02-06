@@ -4,8 +4,11 @@ This repo is dedicated to my projects and studies based on the amazing series In
 ## what you will need 
 
 -> AWS Account
+
 -> AWS Key and a profile configured on you machine
+
 -> Basic Linux Knowledge
+
 -> Python3/Ansible
 
 
