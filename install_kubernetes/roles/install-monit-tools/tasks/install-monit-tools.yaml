@@ -3,6 +3,10 @@
   shell: helm repo add stable {{ url_repo_helm }}
   register: prometheus_add_repo
 
+- name: add prometheus new repo
+  shell: helm repo add {{ install_repo_prometheus }}
+  register: add_prometheus_new_repo
+
 - name: helm update
   shell: helm repo update
   register: prometheus_update_repo
